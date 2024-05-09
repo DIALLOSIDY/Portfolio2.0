@@ -10,11 +10,11 @@
 <body>
    
 
-        <header>
+        <header class="header" >
             <h1>DIALLO</h1>
             <nav class="nav-bar"> 
                 
-                <div class="nav-bar-items">
+                <div id="items" class="nav-bar-items">
                     <a class="active" href="#">Home</a>
                     <a href="#about">About</a>
                     <a href="#project">Project</a>
@@ -22,14 +22,16 @@
                     <a href="#contact">Contact</a>
 
                 </div>
-                <div class="icon">burger</div>
+                
+                <div class="icon" ><i  class='bx bx-menu'></i></div>
+                <div class="exit"></div>
 
             </nav>
 
         </header>
 
         <main>
-            <div class="home">
+            <div class="home" >
                 <div class="desc">
 
                     <h2>Salut ,c'est moi</h2>
@@ -41,11 +43,11 @@
 
                     </p>
                     <div class="media">
-                        <a href=""><i class='bx bxl-github'></i></a>
-                        <a href=""><i class='bx bxl-facebook'></i></a>
-                        <a href=""><i class='bx bxl-linkedin'></i></a>
-                        <a href=""><i class='bx bxl-twitter'></i></a>
-                        <a href=""><i class='bx bxl-youtube'></i></a>
+                        <a href="#"><i class='bx bxl-github'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
 
                     </div>
                     <button> Download CV  </i></button>
@@ -72,10 +74,10 @@
                 </div>
                 
             </section>
-
+            <h2>Mes projects</h2>
             <section id="project">
 
-                     
+                    
                     <div class="block">
                          <span class="text-contains">jfdbfbdbfdfhdbhfbd</span>
                     </div>
@@ -130,7 +132,7 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <form class="container">
+            <form class="container" method="get" id="form" >
                 
                 <h1>CONTACTEZ MOI </h1>
         
@@ -148,24 +150,29 @@
                     <input type="text">
                     <label for="pass">Email :</label>
                 </div>
-                <button class="btn">Envoyer</button>
+                <button class="btn" type="submit" >Envoyer</button>
                 
         
             </form>
                 
              
         </section>
-            
-
+    
         </main>
-        
-
- 
-
     
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script.js"></script>  
+    <script src="script.js"></script> 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "vxmBhlN_BVdmJ9O7E",
+        });
+    })();
+    </script>
 </body>
 
 </html>
