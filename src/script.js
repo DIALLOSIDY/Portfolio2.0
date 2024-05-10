@@ -1,26 +1,38 @@
 
-/*GESTION DE L'ENVOI DU MESSAGE  */
 
-const btn = document.querySelector('.btn');
+const emailInput = document.getElementById("from_email");
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+function validerEmail(emailValue) {
+    let regex = new RegExp("[a-z-0-9._]+@[a-z-0-9._]+\\.[a-z-0-9._]+");
+    if (!regex.test(emailValue)) {
+        throw new Error("L'email n'est pas valide");
+    }
+}
 
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_z7331eg';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
+const form = document.getElementById('form');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    try {
+        validerEmail(emailInput.value);
+        const btn = document.querySelector('.btn');
+        btn.value = 'Sending...';
+        const serviceID = 'default_service';
+        const templateID = 'template_z7331eg';
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Sent!');
+                form.reset();
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+    } catch (error) {
+        alert(error.message);
+    }
 });
+
+ 
 
 
 /*FIN DU MESSAGE  */
@@ -75,9 +87,9 @@ navBarItems.forEach(item => {
 new Typed('.passion', {
     strings : [
         'Étudiant en informatique 👨‍🎓 ' ,
-        'Développeur de logiciels 💻👨‍💼 ' ,
-        'Développeur mobile 📱👨‍💻 ' ,
-        'Passionné de cybersécurité 🔒🖥️ '
+        'Passionné de développeur de logiciels 💻👨‍💼 ' ,
+        'Passionné de développeur mobile 📱👨‍💻 ' ,
+        'passionné de cybersécurité 🔒🖥️ '
            ],
     typeSpeed: 100,
     backSpeed: 100,

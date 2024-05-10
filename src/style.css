@@ -87,9 +87,11 @@ h3{
     font-size: 2.6rem;
 }
 h2{
-    position: absolute;
-    
+
     font-size: 1.7rem;
+}
+span.passion{
+    font-size: 1.5rem;
 }
 
 
@@ -210,9 +212,7 @@ h2{
     header h1{
        display: none;
     }
-    h4{
-        font-size: 0.9rem;
-    }
+    
     h3{
         font-size: 1.2rem;
     }
@@ -416,7 +416,7 @@ button:hover::before{
         position: absolute;
         margin-top: 100px;
         margin-bottom: 150px;
-        left: 110px;
+        left: 85px;
         display: flex;
         justify-content: center;
         width: 300px;
@@ -457,7 +457,7 @@ button:hover::before{
         position: absolute;
         margin-top: 100px;
         margin-bottom: 150px;
-        left: 110px;
+        left: 85px;
         display: flex;
         justify-content: center;
         width: 350px;
@@ -563,13 +563,13 @@ button:hover::before{
         width: 80%;
         font-size: 18px;
         text-align: center;
-        margin-left: 70px;
+        margin-left: 35px;
     }
 
     #about .picture img {
     position: relative;
     margin-top: 0px;
-    margin-left: 45px;
+    margin-left: 35px;
     display: flex;
     justify-content: center;
     width: 330px;
@@ -598,13 +598,13 @@ button:hover::before{
         width: 95%;
         font-size: 30px;
         text-align: center;
-        margin-left: 70px;
+        margin-left: 35px;
     }
 
     #about .picture img {
     position: relative;
     margin-top: 0px;
-    margin-left: 45px;
+    margin-left: 35px;
     display: flex;
     justify-content: center;
     width: 350px;
@@ -622,7 +622,7 @@ button:hover::before{
 
 #project  .block{
     
-    margin-left: 80px;
+    margin-left: 60px;
     position: relative;
     text-align: center;
     width: 240px;
@@ -694,11 +694,21 @@ button:hover::before{
         display: flex;
         flex-direction: column;
         row-gap: 20px;
-        top:250px;
+        margin-top:200px;
         background-color:var(--bg-color);
         
     }
+    #project  .block{
     
+        width: 98%;
+        height: 200px;
+        margin-left: 1px;  
+    }
+    .h2{
+        position: relative;
+        margin-top: 400px;
+    }
+   
 }
 @media (max-width: 550px) {
     
@@ -710,6 +720,12 @@ button:hover::before{
         margin-top:20px;
         background-color:var(--bg-color);
         
+    }
+    #project  .block{
+    
+        width: 98%;
+        height: 200px;
+        margin-left: 1px;  
     }
     #project h2{
         margin-left: 35%;
@@ -973,7 +989,7 @@ input:focus +label {
         margin-left: 45%;
         font-size: 25px;
         color: var(--main-color);
-    
+        margin-top: 110px;
 
         
     }
@@ -1003,7 +1019,7 @@ input:focus +label {
         border-radius: 20px;
         box-shadow:  3px 3px 20px #0ef;
         padding-left: 20px;
-        margin-left: 50px;
+        margin-left: 1px;
         
         
         
@@ -1068,7 +1084,7 @@ input:focus +label {
         border-radius: 20px;
         box-shadow:  3px 3px 20px #0ef;
         padding-left: 20px;
-        margin-left: 50px;
+        margin-left: 10px;
         bottom: 15%;
         
         
