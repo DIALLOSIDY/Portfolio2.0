@@ -65,6 +65,23 @@ exit.addEventListener("click" ,()=>{
 
 /*FIN GESTION BURGER */
 
+/*POUR FERMER LA POPUP QUAND ON CLICK SUR UN ITEM  */
+
+var allItems =document.querySelectorAll("#items a")
+
+for(const ite of allItems){
+    ite.addEventListener("click",(e)=>{
+        e.preventDefault();
+        items.classList.add("nav-bar-items")
+        items.classList.remove("popup")
+        icon.style.display="block"
+        exit.style.display="none"
+
+    })
+}
+
+/*FIN ... */
+
 /*CLICK SUR LES ITEMS DE LA BARRE DE NAVIGATION  */
 
 const navBarItems = document.querySelectorAll('.nav-bar-items a');
