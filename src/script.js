@@ -42,7 +42,7 @@ form.addEventListener('submit', function(event) {
 const icon =document.querySelector(".icon")
 const header =document.querySelector(".header")
 const items =document.getElementById("items")
-const exit = document.querySelector(".exit" )
+const exit = document.querySelector(".exit" ) 
 
 
 icon.addEventListener("click",()=>{
@@ -50,6 +50,8 @@ icon.addEventListener("click",()=>{
     items.classList.add("popup")
     icon.style.display="none"
     exit.style.display="block"
+    close =true
+    console.log(close )
     
 })
 
@@ -58,6 +60,7 @@ exit.addEventListener("click" ,()=>{
     items.classList.remove("popup")
     icon.style.display="block"
     exit.style.display="none"
+    close =false
 
 
 })
@@ -66,19 +69,21 @@ exit.addEventListener("click" ,()=>{
 /*FIN GESTION BURGER */
 
 /*POUR FERMER LA POPUP QUAND ON CLICK SUR UN ITEM  */
+const allItems =document.querySelectorAll("#items a")
 
-var allItems =document.querySelectorAll("#items a")
 
-for(const ite of allItems){
-    ite.addEventListener("click",(e)=>{
-        e.preventDefault();
+for(i=0 ;i<allItems.length ;i++){
+    allItems[i].addEventListener("click",(e)=>{
         items.classList.add("nav-bar-items")
         items.classList.remove("popup")
         icon.style.display="block"
         exit.style.display="none"
+        console.log("cliqué")
 
     })
 }
+
+
 
 /*FIN ... */
 
