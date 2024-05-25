@@ -71,18 +71,16 @@ exit.addEventListener("click" ,()=>{
 /*POUR FERMER LA POPUP QUAND ON CLICK SUR UN ITEM  */
 const allItems =document.querySelectorAll("#items a")
 
-
-for(i=0 ;i<allItems.length ;i++){
-    allItems[i].addEventListener("click",(e)=>{
-        items.classList.add("nav-bar-items")
-        items.classList.remove("popup")
-        icon.style.display="block"
-        exit.style.display="none"
-        console.log("cliqué")
-
-    })
-}
-
+    for(i=0 ;i<allItems.length ;i++){
+        allItems[i].addEventListener("click",(e)=>{
+            items.classList.add("nav-bar-items")
+            items.classList.remove("popup")
+            icon.style.display="block"
+            exit.style.display="none"
+            console.log("cliqué")
+    
+        })
+    }
 
 
 /*FIN ... */
@@ -109,8 +107,8 @@ navBarItems.forEach(item => {
 new Typed('.passion', {
     strings : [
         'Étudiant en informatique 👨‍🎓 ' ,
-        'Passionné de développeur de logiciels 💻👨‍💼 ' ,
-        'Passionné de développeur mobile 📱👨‍💻 ' ,
+        'Passionné de développement de logiciels 💻👨‍💼 ' ,
+        'Passionné de développement mobile 📱👨‍💻 ' ,
         'passionné de cybersécurité 🔒🖥️ '
            ],
     typeSpeed: 100,

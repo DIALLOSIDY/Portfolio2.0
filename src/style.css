@@ -13,8 +13,8 @@
 }
 
 body{
-    background-color: var(--bg-color);
     overflow-x:hidden; /*pour empecher le defilement horizontal de lecran*/
+    background-color: #032422;
     
 }
 
@@ -128,7 +128,7 @@ span.passion{
 .icon {
     position: relative;  
     font-size: 50px;
-    color: white;
+    color:var(--bg-color);
     bottom: 0;
     margin: 0px;
     right: 100px;
@@ -201,6 +201,7 @@ span.passion{
         left: 2px;
         display: block;
         height: 38px;
+        color: #fff;
     }
     header {
         top: 0;
@@ -233,6 +234,7 @@ span.passion{
         left: 2px;
         display: block;
         height: 38px;
+        color: #fff;
     }
     header {
         top: 0;
@@ -411,7 +413,7 @@ button:hover::before{
         color: var(--text-color);
         font-size: 1rem;
         font-family: "Poppins" sans-serif;
-        width: 50%;
+        width: 60%;
 
     }
     .home .picture img {
@@ -452,7 +454,7 @@ button:hover::before{
         color: var(--text-color);
         font-size: 2rem;
         font-family: "Poppins" sans-serif;
-        width: 80%;
+        width: 100%;
 
     }
     .home .picture img {
@@ -501,7 +503,7 @@ button:hover::before{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 130px;
-    background-color:var(--bg-color2);
+    background-color:var();
     width: auto;
     height: 630px;
     
@@ -548,7 +550,7 @@ button:hover::before{
         grid-template-columns: 1fr ;
         row-gap: 20px;
         margin-top:50px;
-        background-color:var(--bg-color);
+        background-color:var();
         width: auto;
         height: 630px;
         
@@ -589,7 +591,7 @@ button:hover::before{
         grid-template-columns: 1fr ;
         row-gap: 20px;
         margin-top:50px;
-        background-color:var(--bg-color);
+        background-color:var();
         width: auto;
         height: 630px;
         padding-bottom: 90px;
@@ -645,7 +647,7 @@ button:hover::before{
     right: 0;
     text-align: center;
     background: linear-gradient(rgb(0,0,0), #0ef);
-    transform: translateY(-100%);
+    transform: translateY(0);
     font-size: 1rem;
     color: #fff;
     transition: .7s;
@@ -676,8 +678,8 @@ button:hover::before{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 35px;
-    height: 30px;
+    width: 65px;
+    height: 40px;
     font-size: 20px;
     color: var(--text-color);
     background-color: #1f242d;
@@ -705,10 +707,14 @@ button:hover::before{
 }
 
 #project .block:nth-of-type(3) {
-    background-image: url('assert/block3.jpg');
+    background-image: url('assert/netoyer.webp');
+    background-size:cover;
+    background-position: -70px 
 }
 #project .block:nth-of-type(4) {
-    background-image: url('assert/block3.jpg');
+    background-image: url('assert/chat-gpt.jpg');
+    background-size:cover;
+    
 }
 #project .block:nth-of-type(5) {
     background-image: url('assert/block3.jpg');
@@ -728,7 +734,7 @@ button:hover::before{
         flex-direction: column;
         row-gap: 20px;
         margin-top:200px;
-        background-color:var(--bg-color);
+        background-color:var();
         
     }
     #project  .block{
@@ -739,7 +745,7 @@ button:hover::before{
     }
     .h2{
         position: relative;
-        margin-top: 400px;
+        margin-top: 450px;
     }
     #project .text-contains{
         
@@ -755,7 +761,8 @@ button:hover::before{
         flex-direction: column;
         row-gap: 20px;
         top:250px;
-        background-color:var(--bg-color);
+        background-color:var();
+        margin-bottom: 180px;
         
     }
     #project  .block{
@@ -766,7 +773,7 @@ button:hover::before{
     }
     .h2{
         position: absolute;
-        margin-top: 25%;
+        margin-top: 39%;
         margin-left: 35%;
         font-size: 40px;
         color: var(--main-color);
@@ -779,10 +786,8 @@ button:hover::before{
 }
 
 /*SKILLS */
-#skills {
-     
-    position: relative;
-    margin-top: 300px;
+#skills {  
+    position: relative; 
 }
 #skills  .block{
     
@@ -833,10 +838,6 @@ button:hover::before{
 
 @media (max-width: 380px) {
 
-    #skills{
-        margin-bottom: 550px;
-    }
-    
     #skills  .block{
     
         margin-left: 60px;
@@ -845,7 +846,7 @@ button:hover::before{
         flex-direction: column;
         
         margin: 20px 20px 20px 20px;
-        width: 40%;
+        width: 60%;
         height: 15px;
         border: 2px solid gray;
         border-radius: 10px;
@@ -862,10 +863,11 @@ button:hover::before{
     #skills h2{
     
         margin-left: 25%;
-        font-size: 25px;
+        font-size: 40px;
         color: var(--main-color);
         
     }
+   
     
 }
 @media (max-width: 550px) {
@@ -897,7 +899,7 @@ button:hover::before{
         margin-left: 25%;
         font-size: 40px;
         color: var(--main-color);
-        
+
     }
     
 }
@@ -907,17 +909,17 @@ button:hover::before{
 
 
 
-.contact{
-    position: relative;
-    top: 0;
-
+#contact{
+    position: absolute;
+    margin-left: 18%;
+    
 }
 
 .container {
 
     position: relative;
-    width: 50%;
-    height: 500px;
+    width: 100%;
+    height: 50%;
     border: 2px solid #9999;
     border-radius: 20px;
     box-shadow: 10px 10px 14px 6px #0ef;
@@ -930,7 +932,6 @@ button:hover::before{
 
 .container h1 {
     position: relative;
-    margin-left: 170px;
     color: var(--text-color);
 }
 
@@ -942,7 +943,7 @@ button:hover::before{
 
 label {
     position: absolute;
-    bottom: 5px;
+    bottom: 8px;
     font-size: 15px;
     font-weight: bold;
     transition: 0.5s;
@@ -967,7 +968,7 @@ input {
 
 
 input:focus +label {
-    position: absolute;
+    position: relative;
     color: #0ef;
     bottom: 70%;
 }
@@ -1005,8 +1006,8 @@ input:focus +label {
 }
 
 #contact h2{
-    position: absolute;
-    margin-left: 30%;
+    position: relative;
+    margin-left: 25%;
     font-size: 25px;
     color: var(--main-color);
     top: 80%;
@@ -1016,21 +1017,29 @@ input:focus +label {
 
 
 @media (max-width: 380px) {
+   
+    #contact{
+        position: absolute;
+        margin-top: 1px;
+        margin-left: 5%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
     .container h1 {
         font-size: 1rem;
         font-weight: bold;
         position: relative;
-        margin-left: 80px;
+        margin-left: 0px;
         margin-top: 15px;
         color: var(--text-color);
     }
 
     #contact h2{
-        position: absolute;
+        position:relative;
         margin-left: 45%;
-        font-size: 25px;
+        font-size: 30px;
         color: var(--main-color);
-        margin-top: 110px;
 
         
     }
@@ -1053,22 +1062,22 @@ input:focus +label {
 
     .container {
 
-        position: absolute;
-        width: 80%;
-        height: 350px;
+        position: relative;
+        width: 100%;
+        height: 85%;
         border: 2px solid #9999;
         border-radius: 20px;
         box-shadow:  3px 3px 20px #0ef;
         padding-left: 20px;
-        margin-left: 1px;
-        
+        margin-left: 18%;
+        margin-bottom: 50%;
         
         
     }
 
     label {
         position: absolute;
-        bottom: 20px;
+        bottom: 0px;
         font-size: 15px;
         font-weight: bold;
         transition: 0.5s;
@@ -1076,11 +1085,21 @@ input:focus +label {
         font-size: 25px;
         color: #bbb;
     }
+   
+
 
 }
 
 
 @media (max-width: 550px) {
+
+    #contact{
+        position: absolute;
+        margin-left: 5%;
+        margin-top: 1px;
+        display: flex;
+        flex-direction: column;
+    }
     .container h1 {
         font-size: 1rem;
         font-weight: bold;
@@ -1091,11 +1110,10 @@ input:focus +label {
     }
 
     #contact h2{
-        position: absolute;
+        position:relative;
         margin-left: 45%;
         font-size: 30px;
         color: var(--main-color);
-        top: 80%;
 
         
     }
@@ -1118,21 +1136,21 @@ input:focus +label {
 
     .container {
 
-        position: absolute;
-        width: 90%;
-        height: 370px;
+        position: relative;
+        width: 100%;
+        height: 80%;
         border: 2px solid #9999;
         border-radius: 20px;
         box-shadow:  3px 3px 20px #0ef;
         padding-left: 20px;
-        margin-left: 10px;
-        bottom: 11%;
+        margin-left: 18%;
+        margin-bottom: 50%;
         
         
     }
 
     label {
-        position: absolute;
+        position: relative;
         bottom: 20px;
         font-size: 15px;
         font-weight: bold;
@@ -1143,6 +1161,7 @@ input:focus +label {
     }
 
 }
+
 
 
 /*fin formulaire */
